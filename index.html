@@ -166,10 +166,13 @@
       </div>
     </header>
 
-    <main class="container my-5">
+   <main class="container my-5">
+      
+      <!-- Hàng 1: Giới thiệu, Học vấn và Dự án (Chiếm trọn col-12 để layout đẹp hơn) -->
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-12">
           
+          <!-- About Me -->
           <section id="about" class="mb-5">
             <h2 class="section-title">About Me</h2>
             <p class="fs-5">
@@ -180,31 +183,38 @@
             </p>
           </section>
 
+          <!-- Education -->
           <section id="education" class="mb-5">
             <h2 class="section-title">Education</h2>
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start">
-                  <div>
-                    <h5 class="card-title fw-bold">Developer</h5>
-                    <p class="card-text text-muted">Forest Studio</p>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h5 class="card-title fw-bold">Developer</h5>
+                      <p class="card-text text-muted mb-0">Forest Studio</p>
+                    </div>
+                    <div class="mt-3">
+                      <span class="badge bg-primary">Đang thực tập</span>
+                    </div>
                   </div>
-                  <span class="badge bg-primary">Đang thực tập</span>
                 </div>
               </div>
-            </div>
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title fw-bold" id="cunhan">Cử nhân</h5>
-                <p class="card-text text-muted">Trường Đại học Khoa học Tự nhiên</p>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold" id="cunhan">Cử nhân</h5>
+                    <p class="card-text text-muted">Trường Đại học Khoa học Tự nhiên</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
+          <!-- Featured Projects -->
           <section id="projects" class="mb-5">
             <h2 class="section-title">Featured Projects</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4">
-              
               <div class="col" id="portfolio-project">
                 <div class="card h-100">
                   <div class="card-body">
@@ -266,11 +276,120 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
 
-          <section id="certificates" class="mb-5">
+        </div>
+      </div>
+
+      <!-- Hàng 2: ĐƯA 2 BẢNG XUỐNG ĐÂY - Chia đôi màn hình (col-lg-6 mỗi bên) -->
+      <div class="row g-4 mb-5" id="skills-tables">
+        
+        <!-- Khối Bảng Ngôn Ngữ -->
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">💻 Tech Stack </h5>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" style="font-size: 0.85rem;">
+                  <thead class="table-primary">
+                    <tr>
+                      <th style="width: 25%">Công nghệ</th>
+                      <th style="width: 55%">Kiến thức cốt lõi</th>
+                      <th style="width: 20%">Mức độ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>HTML</strong></td>
+                      <td>Xây dựng cấu trúc chuẩn SEO, Semantic Web, tối ưu biểu mẫu (Forms)</td>
+                      <td><span class="badge bg-success">Trung bình</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>CSS</strong></td>
+                      <td>Bố cục nâng cao (Flexbox, Grid), Hiệu ứng chuyển động (Animation), Responsive đa thiết bị</td>
+                      <td><span class="badge bg-success">Trung bình</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>JavaScript</strong></td>
+                      <td>Lập trình hướng đối tượng căn bản, Xử lý bất đồng bộ (Async/Await), Thao tác DOM linh hoạt</td>
+                      <td><span class="badge bg-primary">Cơ bản</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Bootstrap 5</strong></td>
+                      <td>Sử dụng Grid System để dàn trang nhanh, tùy biến linh hoạt các UI Components có sẵn</td>
+                      <td><span class="badge bg-success">Trung bình</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>ReactJS</strong></td>
+                      <td>Tư duy chia nhỏ Component, Quản lý trạng thái (State/Props) và vòng đời với Hooks</td>
+                      <td><span class="badge bg-warning text-dark">Chưa học</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>TypeScript</strong></td>
+                      <td>Khai báo kiểu dữ liệu (Static Typing), Kiểm soát lỗi chặt chẽ từ khi viết code</td>
+                      <td><span class="badge bg-warning text-dark">Chưa học</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>SQL</strong></td>
+                      <td>Truy vấn và tối ưu hóa dữ liệu phức tạp (Subquery, Joins), Thiết kế chuẩn hóa cơ sở dữ liệu</td>
+                      <td><span class="badge bg-primary">Cơ bản</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Khối Bảng Công Cụ -->
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="fw-bold mb-3">🛠️ Development Tools</h5>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" style="font-size: 0.85rem;">
+                  <thead class="table-dark">
+                    <tr>
+                      <th style="width: 25%">Công cụ</th>
+                      <th style="width: 55%">Ứng dụng thực tế</th>
+                      <th style="width: 20%">Mức độ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>VS Code</strong></td>
+                      <td>Tối ưu hóa tốc độ code bằng Phím tắt & Snippets, Cấu hình môi trường và Debug lỗi trực tiếp</td>
+                      <td><span class="badge bg-success">Khá</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>GitHub</strong></td>
+                      <td>Lưu trữ và theo dõi tiến độ mã nguồn, Tự động hóa Deploy sản phẩm qua GitHub Pages</td>
+                      <td><span class="badge bg-primary">Cơ bản</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>SourceTree</strong></td>
+                      <td>Trực quan hóa các nhánh code (Branches), Giải quyết triệt để các xung đột (Conflict) khi Merge</td>
+                      <td><span class="badge bg-primary">Cơ bản</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>MySQL</strong></td>
+                      <td>Mô hình hóa dữ liệu (ERD), Quản trị và kiểm tra mối quan hệ ràng buộc giữa các bảng dữ liệu</td>
+                      <td><span class="badge bg-warning text-dark">Đang học</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hàng 3: Certificates (Trải rộng col-12) -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <section id="certificates">
             <h2 class="section-title">Certificates</h2>
             <div class="card">
               <div class="card-body">
@@ -281,13 +400,14 @@
               </div>
             </div>
           </section>
-
         </div>
+      </div>
 
-        <div class="col-lg-4">
-          
-          <section id="skills" class="mb-4">
-            <div class="card mb-4">
+      <!-- Hàng 4: Core Skills & Thông tin liên hệ -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <section id="skills">
+            <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title mb-4 fw-bold">💡 Core Skills</h5>
                 <div>
@@ -302,112 +422,16 @@
                 </div>
               </div>
             </div>
-
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="fw-bold mb-3">💻 Ngôn ngữ & Công nghệ</h5>
-                <div class="table-responsive">
-                  <table class="table table-hover align-middle mb-0" style="font-size: 0.9rem;">
-                    <thead class="table-primary">
-                      <tr>
-                        <th>Công nghệ</th>
-                        <th>Nội dung</th>
-                        <th>Mức độ</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>HTML</td>
-                        <td>Semantic, Form, Table</td>
-                        <td><span class="badge bg-success">Khá</span></td>
-                      </tr>
-                      <tr>
-                        <td>CSS</td>
-                        <td>Flexbox, Grid, Responsive</td>
-                        <td><span class="badge bg-success">Khá</span></td>
-                      </tr>
-                      <tr>
-                        <td>JavaScript</td>
-                        <td>DOM, Event, Array, Local Storage</td>
-                        <td><span class="badge bg-primary">Cơ bản</span></td>
-                      </tr>
-                      <tr>
-                        <td>Bootstrap 5</td>
-                        <td>Grid System, Components UI</td>
-                        <td><span class="badge bg-success">Khá</span></td>
-                      </tr>
-                      <tr>
-                        <td>ReactJS</td>
-                        <td>Component, Props, State, Hook</td>
-                        <td><span class="badge bg-warning text-dark">Đang học</span></td>
-                      </tr>
-                      <tr>
-                        <td>TypeScript</td>
-                        <td>Type, Interface, Basic Types</td>
-                        <td><span class="badge bg-warning text-dark">Đang học</span></td>
-                      </tr>
-                      <tr>
-                        <td>SQL</td>
-                        <td>CRUD, JOIN, ERD Design</td>
-                        <td><span class="badge bg-primary">Cơ bản</span></td>
-                      </tr>
-                      <tr>
-                        <td>Git</td>
-                        <td>Commit, Push, Pull, Branch, Merge</td>
-                        <td><span class="badge bg-primary">Cơ bản</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="fw-bold mb-3">🛠️ Công cụ sử dụng</h5>
-                <div class="table-responsive">
-                  <table class="table table-hover align-middle mb-0" style="font-size: 0.9rem;">
-                    <thead class="table-dark">
-                      <tr>
-                        <th>Công cụ</th>
-                        <th>Mục đích</th>
-                        <th>Mức độ</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><i class="bi bi-code-slash me-1"></i>VS Code</td>
-                        <td>Extension, Debug, Terminal, Emmet</td>
-                        <td><span class="badge bg-success">Khá</span></td>
-                      </tr>
-                      <tr>
-                        <td><i class="bi bi-github me-1"></i>GitHub</td>
-                        <td>Git Flow, GitHub Pages</td>
-                        <td><span class="badge bg-primary">Cơ bản</span></td>
-                      </tr>
-                      <tr>
-                        <td><i class="bi bi-git me-1"></i>SourceTree</td>
-                        <td>Commit, Resolve Conflict trực quan</td>
-                        <td><span class="badge bg-primary">Cơ bản</span></td>
-                      </tr>
-                      <tr>
-                        <td><i class="bi bi-database me-1"></i>MySQL</td>
-                        <td>Quản lý, Thiết kế Database</td>
-                        <td><span class="badge bg-warning text-dark">Đang học</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
           </section>
+        </div>
 
+        <div class="col-md-6 mb-4">
           <section id="contact">
-            <div class="card bg-primary text-white p-3">
+            <div class="card bg-primary text-white p-3 h-100">
               <h4 class="fw-bold mb-3">Thông tin liên hệ</h4>
               <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> nguyendangtho9@gmail.com</p>
               <p class="mb-2"><i class="bi bi-github me-2"></i> github.com/DangTho0504</p>
-              <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i> 0386814766</p>
+              <p class="mb-3"><i class="bi bi-telephone-fill"></i> 0386814766</p>
               
               <div class="d-flex gap-3 fs-4 border-top pt-2">
                 <a href="https://github.com/DangTho0504" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
@@ -417,9 +441,9 @@
               </div>
             </div>
           </section>
-
         </div>
       </div>
+
     </main>
 
     <footer id="footer" class="bg-dark text-white text-center py-4 mt-5">
